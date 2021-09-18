@@ -2,6 +2,8 @@
   "name": "adote",
   "version": "0.1.0",
   "private": true,
+  "description": "Site de adoção de animais ou doações",
+  "author": "Felipe Souza",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +13,9 @@
   "dependencies": {
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-lottie": "^1.2.3",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "eslint": "7.32.0",
