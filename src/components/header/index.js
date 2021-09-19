@@ -9,6 +9,7 @@ import {NavButton, NavButtonEmphasis} from '../navButtons'
 const Header = () =>{
 
   const Links = [
+
     {
       name:'Home',
       direction:'home',
@@ -33,11 +34,8 @@ const Header = () =>{
 
     <Container>
 
-        <LeftContainer>
+        <LeftContainer/>
 
-          Logo em gif ou animação da Lottie
-
-        </LeftContainer>
 
         <RightContainer>
           {Links.map((props,key)=>(<NavButton key={key} name={props.name} direction={props.direction} />))}

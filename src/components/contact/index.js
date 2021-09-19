@@ -6,7 +6,7 @@ import {
   Btn,
   Submit,
 }from './styled'
-
+import {BiRightArrow} from 'react-icons/bi'
 
 export default function Contact() {
   return (
@@ -23,7 +23,7 @@ export default function Contact() {
             <Btn>
               <div/>
               <Submit >
-                Send
+                Send<BiRightArrow/>
               </Submit>
             </Btn>
 
