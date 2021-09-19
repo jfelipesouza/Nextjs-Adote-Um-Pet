@@ -1,35 +1,27 @@
 import React from 'react'
-import {
-  Container,
-  ContainerEmphasis
-} from './styled';
+import { BtnContainer,LinkEmphasis,Link } from './styled';
 
 
 export const NavButton = ({name,direction}) => {
-
-  const navigate = '#'+direction
-
   return(
-    <Container>
-
-      <a href={navigate} >
+    <BtnContainer>
+      <Link href={'#'+direction} >
         {name}
-      </a>
-
-    </Container>
-  )
-
-}
-
-export const NavButtonEmphasis = ({name,direction}) =>{
-
-
-  return(
-    <ContainerEmphasis>
-      <a href={'/'+direction} >
-        {name}
-      </a>
-    </ContainerEmphasis>
+      </Link>
+    </BtnContainer>
   )
 }
+
+export const NavButtonEmphasis = ({name,direction}) => {
+  return(
+
+    <BtnContainer>
+      <LinkEmphasis href={'/'+direction} >
+      {name}
+      </LinkEmphasis>
+    </BtnContainer>
+
+  )
+}
+
 

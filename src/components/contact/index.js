@@ -1,9 +1,34 @@
-import React from 'react';
+import React from 'react'
+import {
+  Container,
+  Card,
+  FormGroup,
+  Btn,
+  Submit,
+}from './styled'
 
-// import { Container } from './styles';
 
-function Contact() {
-  return <div />;
+export default function Contact() {
+  return (
+    <Container>
+        <Card>
+          <h2>Entre em contato</h2>
+          <form>
+
+            <FormGroup>
+              <input type="input" className="form__field" placeholder="Email" Email="Email" id='Email' required />
+              <label htmlFor="Email" className="form__label">Email</label>
+            </FormGroup>
+
+            <Btn>
+              <div/>
+              <Submit >
+                Send
+              </Submit>
+            </Btn>
+
+          </form>
+        </Card>
+    </Container>
+  )
 }
-
-export default Contact;

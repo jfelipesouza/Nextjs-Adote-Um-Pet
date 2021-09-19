@@ -1,64 +1,54 @@
-import styled,{keyframes} from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div`
-  height:40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const BtnContainer = styled.div`
   margin-right: 15px;
-  padding: 0 15px ;
-  border-radius: 5px 5px 5px 5px;
-  transition: border-radius;
-  transition-duration:1000ms;
-  transition-timing-function:ease-in-out;
-  text-transform:capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+`;
 
+export const Link = styled.a`
+  height: 40px;
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition-property:all;
+  transition-duration: 500ms;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-decoration:none;
+  color: #fff;
 
   :hover{
-    border-radius: 100px 100px 100px 100px;
-    background-color: tomato;
-  }
-
-  a{
-    text-decoration:none;
-    color:#222;
-    font-size:1.1rem;
-
-    :hover{
-      color:#fff;
-
-    }
+    text-decoration-line: underline;
+    border-radius: 20px;
   }
 
 `;
 
-
-export const ContainerEmphasis = styled.div`
-  height:40px;
+export const LinkEmphasis = styled.a`
+  height: 40px;
+  background-color: ${props=>props.theme.colors.secundary};
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-right: 15px;
-  padding: 0 10px ;
-  border-radius: 5px 5px 5px 5px;
-  transition: all;
-  transition-duration: 500ms;
-  transition-timing-function:ease-in;
-  text-transform: capitalize;
-  background-color: #ff6347dd;
-  box-shadow:1px 1px 1px 0px black;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition-property:border-radius;
+  transition-duration: 700ms;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 2px;
+  text-decoration:none;
+  color:#fff;
 
   :hover{
-    border-radius: 100px;
-    background-color: #ff6347ff;
+    background-color: ${props=>props.theme.colors.secundary};
+    border-radius: 90px;
   }
-
-  a{
-    text-decoration:none;
-    color:#fff;
-    font-size:1.1rem;
-
-  }
-
 
 `;

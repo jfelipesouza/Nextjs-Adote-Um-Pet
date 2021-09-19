@@ -1,16 +1,33 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
 const GlobalStyle = createGlobalStyle`
-  body {
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
+
+
+  *::-webkit-scrollbar-thumb {
+  background-color: tan;
+  border-radius: 20px;
+
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+  background: #53514d;
+  }
+
 `
 
 const theme = {
   colors: {
-    primary: '#008080',
+    primary: '#ff8b8b',
+    secundary:'#ff6347',
   },
 }
 

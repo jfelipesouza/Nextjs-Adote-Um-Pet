@@ -1,67 +1,52 @@
 import React from 'react';
 import {
-  HeaderContainer,
+  Container,
   LeftContainer,
-  RoutesContainer
+  RightContainer
 } from './styled';
-import {NavButton,NavButtonEmphasis} from '../navButtons';
-import Lottie from 'react-lottie';
-import logo from '../animation/animal.json';
+import {NavButton, NavButtonEmphasis} from '../navButtons'
 
+const Header = () =>{
 
-
-function Header() {
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: logo,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
+  const Links = [
+    {
+      name:'Home',
+      direction:'home',
+    },
+    {
+      name : 'Quem Somos',
+      direction:'quem-somos'
+    },
+    {
+      name : 'Como Ajudar',
+      direction:'ajuda'
+    },
+    {
+      name: 'Contato',
+      direction: 'contato'
     }
-  };
 
-  const routes = [
-    {
-      name:"Home",
-      navigate:'home'
-    },
-    {
-      name:"Quem Somos",
-      navigate:'quem-somos'
-    },
-    {
-      name:"Como Ajudar",
-      navigate:'como-ajudar'
-    },
-    {
-      name:"Contato",
-      navigate:'contato'
-    }]
-
-  return (
-    <HeaderContainer>
-
-      <LeftContainer>
-       <a href={'/'}>
-        <Lottie
-          options={defaultOptions}
-          height={95}
-          width={95}
-        />
-        </a>
-      </LeftContainer>
-
-      <RoutesContainer>
-        {routes.map((props,key)=>(<NavButton key={key} name = {props.name} direction={props.navigate} />))}
-
-        <NavButtonEmphasis name = "Doe" direction={'doe'} />
-
-      </RoutesContainer>
+  ]
 
 
-    </HeaderContainer>
-  );
+  return(
+
+    <Container>
+
+        <LeftContainer>
+
+          Logo em gif ou animação da Lottie
+
+        </LeftContainer>
+
+        <RightContainer>
+          {Links.map((props,key)=>(<NavButton key={key} name={props.name} direction={props.direction} />))}
+          <NavButtonEmphasis name = {'doe'} direction = {'doe'} />
+
+        </RightContainer>
+
+    </Container>
+  )
 }
 
 export default Header;
